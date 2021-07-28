@@ -8,7 +8,7 @@ module.exports = {
     mode: process.env.NODE_ENV,
     context: path.resolve(__dirname, './src'),
     entry: {
-        index: './index.js',
+        main: './js/main.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -17,8 +17,8 @@ module.exports = {
     module: {
         rules: [
             {
-                //     test: /\.css$/i,
-                //     use: [MiniCssExtractPlugin.loader, 'css-loader'],
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
             },
         ]
     },
