@@ -4,15 +4,14 @@
   "description": "The project is uesd for managing resources in SimEnvi Comapany.",
   "main": "index.js",
   "scripts": {
-    "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
-    "start": "cross-env NODE_ENV=development webpack --mode development",
-    "build": "cross-env NODE_ENV=production webpack --mode production"
+    "build": "cross-env NODE_ENV=development webpack --mode development"
   },
   "author": "jcchen, belliwu",
   "license": "ISC",
   "devDependencies": {
     "cross-env": "^7.0.3",
     "css-loader": "^3.4.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "style-loader": "^1.1.3",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"

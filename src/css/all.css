@@ -1,0 +1,10 @@
+ body {
+  margin: 0;
+  background-color: blue;
+  color:#fff;
+}
+
+.text-primary {
+  color: rgb(37, 37, 177);
+}
+

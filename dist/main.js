@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./js/main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./main.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "../node_modules/css-loader/dist/cjs.js!./css/style.css":
-/*!**************************************************************!*\
-  !*** ../node_modules/css-loader/dist/cjs.js!./css/style.css ***!
-  \**************************************************************/
+/***/ "../node_modules/css-loader/dist/cjs.js!./css/all.css":
+/*!************************************************************!*\
+  !*** ../node_modules/css-loader/dist/cjs.js!./css/all.css ***!
+  \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"../node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \" body {\\r\\n  margin: 0;\\r\\n  background-color: red;\\r\\n}\\r\\n\\r\\n/*\\r\\n.box {\\r\\n  width: 300px;\\r\\n  height: 200px;\\r\\n  background-color: #00cc99;\\r\\n}\\r\\n\\r\\np {\\r\\n    font-size: 32px;\\r\\n} */\\r\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./css/style.css?../node_modules/css-loader/dist/cjs.js");
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"../node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \" body {\\r\\n  margin: 0;\\r\\n  background-color: blue;\\r\\n  color:#fff;\\r\\n}\\r\\n\\r\\n.text-primary {\\r\\n  color: rgb(37, 37, 177);\\r\\n}\\r\\n\\r\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./css/all.css?../node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -121,26 +121,38 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 
 /***/ }),
 
-/***/ "./css/style.css":
-/*!***********************!*\
-  !*** ./css/style.css ***!
-  \***********************/
+/***/ "./css/all.css":
+/*!*********************!*\
+  !*** ./css/all.css ***!
+  \*********************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./style.css */ \"../node_modules/css-loader/dist/cjs.js!./css/style.css\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./css/style.css?");
+eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./all.css */ \"../node_modules/css-loader/dist/cjs.js!./css/all.css\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./css/all.css?");
 
 /***/ }),
 
-/***/ "./js/main.js":
-/*!********************!*\
-  !*** ./js/main.js ***!
-  \********************/
+/***/ "./js/module.js":
+/*!**********************!*\
+  !*** ./js/module.js ***!
+  \**********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (() =>\r\n{\r\n    console.log('Hello World, 伍孝章 ！');\r\n});\r\n\n\n//# sourceURL=webpack:///./js/module.js?");
+
+/***/ }),
+
+/***/ "./main.js":
+/*!*****************!*\
+  !*** ./main.js ***!
+  \*****************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.css */ \"./css/style.css\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_style_css__WEBPACK_IMPORTED_MODULE_0__);\n// main.js 檔案是做 webpack 引入資源用\r\n\r\n\r\n// 下面是對 webpack 測試用\r\nconsole.log(\"Hello world !\");\r\nconsole.log(\"My name is belliwu !\")\r\nconsole.log(\"my son is andywu !\")\r\nconsole.log(\"No any change in background of <body/> !\")\r\n\n\n//# sourceURL=webpack:///./js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_all_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/all.css */ \"./css/all.css\");\n/* harmony import */ var _css_all_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_all_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _js_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/module */ \"./js/module.js\");\n// main.js 檔案是做 webpack 引入資源用\r\n\r\n\r\n\r\n// 下面是對 webpack 測試用\r\nconst myName = 'belliwu';\r\nconsole.log('Hello ' + myName);\r\n\r\nObject(_js_module__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n\n\n//# sourceURL=webpack:///./main.js?");
 
 /***/ })
 

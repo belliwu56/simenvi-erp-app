@@ -76,6 +76,9 @@ npm install --save-dev css-loader@^3.4.2
 
 npm install --save-dev style-loader@^1.1.3
 
+npm install --save-dev extract-text-webpack-plugin@next (support webpack 4.x, Not 3.x)
+
+
 > 編輯 webpack.config.js 設定檔 
 for 
   a. cross-env   用於 window 環境下，能識別其環境變數，但 MAC 就不用安裝
