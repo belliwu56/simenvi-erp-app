@@ -1,6 +1,11 @@
 const path = require('path');
-// const ExtractTextPlugin = require("extract-text-webpack-plugin");
-// let extractCSS = new ExtractTextPlugin("css/[name].css")
+
+// 載入 extract-text-webpack-plugin (第一步)
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+let extractCSS = new ExtractTextPlugin("css/all.css")
+
+// 載入 mini-css-extract-plugin (第一步)
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 if (process.env.NODE_ENV === "development")
     console.log(">>>><<<< process.env.NODE_ENV： ", process.env.NODE_ENV)
@@ -24,13 +29,27 @@ module.exports = {
     // Loader 可以理解為模組和資源的轉換器， 它本身是一個 function，接受來源文件作為參數傳遞，最後返回其轉換後的結果。
     module: {
         rules: [
+            // 利用了 style-loader 將 css-loader 處理過後的 CSS 注入到 HTML 內，
+            // 將以 style 標籤的形式存在，但這有違一般開發的處理流程
+            // ，建議還是將 CSS 檔案給獨立出來，
+            // {
+            //     test: /\.css$/,
+            //     use: ['style-loader', 'css-loader'],
+            // },
             {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
-                // use: extractCSS.extract(['css-loader']),
+                test: /\.css$/i,
+                // 新增 loader (第三步)
+                use: extractCSS.extract(['css-loader'])
             },
+            // {
+            //     test: /\.css$/i,
+            //     // 新增 loader (第三步)
+            //     use: [MiniCssExtractPlugin.loader, 'css-loader'],
+            // },
         ]
     },
-    // plugins: [extractCSS],
-    // devtool: "source-map",
+    // 創建實例 (第二步)
+    // plugins: [new MiniCssExtractPlugin()],
+    plugins: [extractCSS],
+    devtool: "source-map",
 }

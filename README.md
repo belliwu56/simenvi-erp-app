@@ -58,11 +58,11 @@ simenvi-erp-app/
 │   │
 │   css/
 │   │
-│   └─── style.js         # css 入口檔案
+│   └─── all.css         # css 入口檔案
 │   │
-│   js/
 │   └─── main.js          # entry 入口檔案
 │
+├─── index.html           # 引入 bundle.js 與 main.css 測試用檔案
 ├─── webpack.config.js    # Webpack 配置檔案
 ├─── package-lock.json
 └─── package.json         # 已安裝 webpack、webpack-cli
@@ -74,10 +74,15 @@ npm install --save-dev cross-env
 
 npm install --save-dev css-loader@^3.4.2
 
+# 利用 style-loader 將 css file plugin html by <style> tag 
 npm install --save-dev style-loader@^1.1.3
 
+#  利用 下列方式 將 css 與 js 獨立引用 by <link> tag 
+(廢棄) 
 npm install --save-dev extract-text-webpack-plugin@next (support webpack 4.x, Not 3.x)
 
+（目前做法）
+npm install --save-dev mini-css-extract-plugin@^0.9.0
 
 > 編輯 webpack.config.js 設定檔 
 for 
