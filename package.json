@@ -1,16 +1,24 @@
 {
   "name": "simenvi-erp-app",
   "version": "1.0.0",
-  "description": "The project is uesd for managing resources in SimEnvi Comapany.",
+  "description": "The project develops and build ERP for SimEnvi Comapany.",
   "main": "",
   "author": "jcchen, belliwu",
   "license": "ISC",
   "scripts": {
-    "build": "cross-env NODE_ENV=development webpack --mode development"
+    "start": "webpack serve --mode development",
+    "build-watch": "webpack --watch",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/belliwu56/simenvi-erp-app.git"
   },
-  "keywords": []
+  "keywords": [
+    "Webpack"
+  ],
+  "devDependencies": {
+    "webpack": "^5.48.0",
+    "webpack-cli": "^4.7.2"
+  }
 }
