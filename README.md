@@ -44,8 +44,8 @@ simenvi-erp-app/
 │   modules/              # 專案各項元件或模組
 │   │
 │   ├─── main.css         # css 入口檔案
-│   ├─── main.js          # entry 入口檔案
-│   └─── index.html  
+│   ├─── main.js          # Webpack entry 入口檔案
+│   └─── index.html       # SPA 網站首頁
 │
 ├─── webpack.config.js    # Webpack 配置檔案
 ├─── package-lock.json
@@ -71,47 +71,50 @@ devServer: {
 },
 ```
 ### (7.2) html-webpack-plugin
-- npm install --save-dev html-webpack-plugin
-  - 用途： 將目錄 src/ 下 所有 html檔 ，經 build 後會輸出到目錄 /dist 下
+- npm install --save-dev html-webpack-plugin 
+- 用途： 將目錄 src/ 下 所有 html檔 ，經 build 後會輸出到目錄 /dist 下
 
 ### (7.3) cross-env (可選)
-- npm install --save-dev cross-env
-    - 用途： 導入 package.json 進入 webpack/config.js 環境變數
+- npm install --save-dev cross-env 
+- 用途： 導入 package.json 進入 webpack/config.js 環境變數
 
 ### (7.4) css-loader and style-loader （可選）
-- npm install --save-dev css-loader
-  - 用途： 處理專案 css
-- npm install --save-dev style-loader
-  - 用途： 利用 style-loader 將 css file plugin html by <style> tag
+1. npm install --save-dev css-loader 
+- 用途： 處理專案 css 
+
+2. npm install --save-dev style-loader 
+- 用途： 利用 style-loader 將 css file plugin html by <style> tag 
 
 ### (7.5) mini-css-extract-plugin （目前用法）
-- npm install --save-dev mini-css-extract-plugin
-  - 用途： 將 css 與 js 獨立引用 by <link> 標籤
+- npm install --save-dev mini-css-extract-plugin 
+- 用途： 將 css 與 js 獨立引用 by <link> 標籤 
 ```
 編輯 webpack.config.js 設定檔說明  
   a. cross-env --> 用於 window 環境下，能識別其環境變數，但 MAC 就不用安裝
   b. style-lader、css-loader --> 兩者一起搭用
   c. mini-css-extract-plugin^0.9.0
   上述 b 和 c 二選一
-``` 
-### (7.6) sass-loader and node-sass
-- npm install --save-dev sass-loader node-sass
-  - 用途： 處理專案 scss
-
-### (7.7) 安裝 JavaScript 的編譯器 Babel
-- npm install --save-dev babel-loader @babel/core @babel/preset-env
 ```
+
+### (7.6) sass-loader and node-sass
+- npm install --save-dev sass-loader node-sass 
+- 用途： 處理專案 scss 
+
+### (7.7) 安裝 JavaScript 的編譯器 Babel 
+- npm install --save-dev babel-loader @babel/core @babel/preset-env 
+``` 
 說明：
 由於瀏覽器的支援度卻跟不上 JavaScript 版本的更新，所以新版本的 JavaScript 在現有的瀏覽器上面支援度很低，目前市面上支援度最高的版是 ECMAScript 5（ES5）了，為了可以使用新版本的 JavaScript 做開發，又要瀏覽器可以支援，需要有相對應的工具作轉換，把新版本的 JavaScript 轉換成 ES5 。
 Webpack 本身並沒有提供把新版本的 JavaScript 轉換成 ES5 的功能，所以需要靠神奇的轉換工具 Babel。
-```
+``` 
+
 ### (7.8) 安裝 clean-webpack-plugin 
-- npm install --save-dev clean-webpack-plugin
-  - 用途： 處理 /dist目錄下所有 gabage
+- npm install --save-dev clean-webpack-plugin 
+- 用途： 處理 /dist目錄下所有 gabage 
 
-## 8. CSS Framework Bootstrap 5 安裝及設定
-- npm install --save bootstrap
+## 8. CSS Framework Bootstrap 5 安裝及設定 
+- npm install --save bootstrap 
 
-## 9. Fontawesome Icons 安裝及設定 
-- npm install --save @fortawesome/fontawesome-free
+## 9. Fontawesome Icons 安裝及設定  
+- npm install --save @fortawesome/fontawesome-free 
 
