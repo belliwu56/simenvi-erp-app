@@ -104,7 +104,9 @@ devServer: {
 - npm install --save-dev babel-loader @babel/core @babel/preset-env 
 ``` 
 說明：
-由於瀏覽器的支援度卻跟不上 JavaScript 版本的更新，所以新版本的 JavaScript 在現有的瀏覽器上面支援度很低，目前市面上支援度最高的版是 ECMAScript 5（ES5）了，為了可以使用新版本的 JavaScript 做開發，又要瀏覽器可以支援，需要有相對應的工具作轉換，把新版本的 JavaScript 轉換成 ES5 。
+由於瀏覽器的支援度卻跟不上 JavaScript 版本的更新，所以新版本的 JavaScript 在現有的瀏覽器上面支援度很低， 
+目前市面上支援度最高的版是 ECMAScript 5（ES5）了，為了可以使用新版本的 JavaScript 做開發，又要瀏覽器可以支援， 
+需要有相對應的工具作轉換，把新版本的 JavaScript 轉換成 ES5。 
 Webpack 本身並沒有提供把新版本的 JavaScript 轉換成 ES5 的功能，所以需要靠神奇的轉換工具 Babel。
 ``` 
 
