@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 if (process.env.NODE_ENV === "development")
     console.log(">>>><<<< process.env.NODE_ENV： ", process.env.NODE_ENV);
@@ -41,6 +42,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             // 不加入下列 template key，預設是會用 HtmlWebpackPlugin 的 html
             template: "./src/index.html"
-        })
+        }),
+        new CleanWebpackPlugin()
     ]
 };

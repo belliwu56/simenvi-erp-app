@@ -2,7 +2,6 @@
 **Description : The project develops and build ERP for SimEnvi Comapany.**
 
 # 專案建置步驟 :
-
 ## 1. 下載及安裝 node.js 套件
 - Download url: https://nodejs.org/zh-tw/download/ 
 - 確定 node.js 安裝成功： node -v, npm -v 
@@ -54,8 +53,8 @@ simenvi-erp-app/
 ``` 
 ## 7. 安裝及設定 Webpack 5 其他相關套件
 ### (7.1) 
-`用途： 建立內建伺服器`
 - npm install --save-dev webpack-dev-server
+- 用途： 建立內建伺服器
 ```
 基本設定:
 1. In webpackconfing.js
@@ -72,24 +71,22 @@ devServer: {
 },
 ```
 ### (7.2) html-webpack-plugin
-`用途： 將目錄 src/ 下 所有 html檔 ，經 build 後會輸出到目錄 /dist 下`
 - npm install --save-dev html-webpack-plugin
+  - 用途： 將目錄 src/ 下 所有 html檔 ，經 build 後會輸出到目錄 /dist 下
 
 ### (7.3) cross-env (可選)
-`用途： 導入 package.json 進入 webpack/config.js 環境變數`
 - npm install --save-dev cross-env
+    - 用途： 導入 package.json 進入 webpack/config.js 環境變數
 
 ### (7.4) css-loader and style-loader （可選）
-`用途： 處理專案 css`
 - npm install --save-dev css-loader
-
-`用途： 利用 style-loader 將 css file plugin html by <style> tag` 
+  - 用途： 處理專案 css
 - npm install --save-dev style-loader
+  - 用途： 利用 style-loader 將 css file plugin html by <style> tag
 
 ### (7.5) mini-css-extract-plugin （目前用法）
-`用途： 將 css 與 js 獨立引用 by <link> 標籤`
 - npm install --save-dev mini-css-extract-plugin
-
+  - 用途： 將 css 與 js 獨立引用 by <link> 標籤
 ```
 編輯 webpack.config.js 設定檔說明  
   a. cross-env --> 用於 window 環境下，能識別其環境變數，但 MAC 就不用安裝
@@ -97,22 +94,24 @@ devServer: {
   c. mini-css-extract-plugin^0.9.0
   上述 b 和 c 二選一
 ``` 
-
 ### (7.6) sass-loader and node-sass
-`用途： 處理專案 scss`
 - npm install --save-dev sass-loader node-sass
+  - 用途： 處理專案 scss
 
-## 8. 安裝 JavaScript 的編譯器 Babel
+### (7.7) 安裝 JavaScript 的編譯器 Babel
+- npm install --save-dev babel-loader @babel/core @babel/preset-env
 ```
 說明：
 由於瀏覽器的支援度卻跟不上 JavaScript 版本的更新，所以新版本的 JavaScript 在現有的瀏覽器上面支援度很低，目前市面上支援度最高的版是 ECMAScript 5（ES5）了，為了可以使用新版本的 JavaScript 做開發，又要瀏覽器可以支援，需要有相對應的工具作轉換，把新版本的 JavaScript 轉換成 ES5 。
 Webpack 本身並沒有提供把新版本的 JavaScript 轉換成 ES5 的功能，所以需要靠神奇的轉換工具 Babel。
 ```
-- npm install --save-dev babel-loader @babel/core @babel/preset-env
+### (7.8) 安裝 clean-webpack-plugin 
+- npm install --save-dev clean-webpack-plugin
+  - 用途： 處理 /dist目錄下所有 gabage
 
-## 9. CSS Framework Bootstrap 5 安裝及設定
+## 8. CSS Framework Bootstrap 5 安裝及設定
 - npm install --save bootstrap
 
-## 10. Fontawesome Icons 安裝及設定 
+## 9. Fontawesome Icons 安裝及設定 
 - npm install --save @fortawesome/fontawesome-free
- 
+
