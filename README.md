@@ -42,10 +42,10 @@ simenvi-erp-app/
 │
 ├─── src/                 # 專案源碼目錄 
 │   │
-│   components/
+│   components/           # 專案各項元件或模組
 │   │
-│   ├─── index.css        # css 入口檔案
-│   ├─── index.js         # entry 入口檔案
+│   ├─── main.css         # css 入口檔案
+│   ├─── main.js          # entry 入口檔案
 │   └─── index.html  
 │
 ├─── webpack.config.js    # Webpack 配置檔案
@@ -53,18 +53,39 @@ simenvi-erp-app/
 └─── package.json         # 已安裝 webpack、webpack-cli
 ``` 
 ## 7. 安裝及設定 Webpack 5 其他相關套件
-### (7.1) cross-env
+### (7.1) 
+`用途： 建立內建伺服器`
+- npm install --save-dev webpack-dev-server
+```
+基本設定:
+1. In webpackconfing.js
+devServer: {
+    contentBase: path.resolve(__dirname, './dist'),
+    index: 'index.html',
+    port: 9000,
+    writeToDisk: true
+},
+
+2. In package.json
+"scripts": {
+    "start": "webpack serve --mode development",
+},
+```
+
+### (7.2) cross-env (可選)
 `用途： 導入 package.json 進入 webpack/config.js 環境變數`
-- npm install --save-dev cross-env (可選)
-### (7.2) css-loader and style-loader （可選）
+- npm install --save-dev cross-env
+
+### (7.3) css-loader and style-loader （可選）
 `用途： 處理專案 css`
 - npm install --save-dev css-loader
-
 `用途： 利用 style-loader 將 css file plugin html by <style> tag` 
 - npm install --save-dev style-loader
-### (7.3) mini-css-extract-plugin （目前用法）
+
+### (7.4) mini-css-extract-plugin （目前用法）
 `用途： 將 css 與 js 獨立引用 by <link> 標籤`
 - npm install --save-dev mini-css-extract-plugin
+
 ```
 編輯 webpack.config.js 設定檔說明  
   a. cross-env --> 用於 window 環境下，能識別其環境變數，但 MAC 就不用安裝
@@ -72,7 +93,8 @@ simenvi-erp-app/
   c. mini-css-extract-plugin^0.9.0
   上述 b 和 c 二選一
 ``` 
-### (7.4) sass-loader and node-sass
+
+### (7.5) sass-loader and node-sass
 `用途： 處理專案 scss`
 - npm install --save-dev sass-loader node-sass
 
@@ -84,9 +106,9 @@ Webpack 本身並沒有提供把新版本的 JavaScript 轉換成 ES5 的功能�
 ```
 - npm install --save-dev babel-loader @babel/core @babel/preset-env
 
-## 9. 安裝及設定 Css framework Bootstrap 5
+## 9. CSS Framework Bootstrap 5 安裝及設定
 - npm install --save bootstrap
 
-## 10. 安裝及設定 Fontawesome Icon 
+## 10. Fontawesome Icons 安裝及設定 
 - npm install --save @fortawesome/fontawesome-free
  
