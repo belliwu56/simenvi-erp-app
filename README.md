@@ -42,7 +42,7 @@ simenvi-erp-app/
 │
 ├─── src/                 # 專案源碼目錄 
 │   │
-│   components/           # 專案各項元件或模組
+│   modules/              # 專案各項元件或模組
 │   │
 │   ├─── main.css         # css 入口檔案
 │   ├─── main.js          # entry 入口檔案
@@ -71,18 +71,22 @@ devServer: {
     "start": "webpack serve --mode development",
 },
 ```
+### (7.2) html-webpack-plugin
+`用途： 將目錄 src/ 下 所有 html檔 ，經 build 後會輸出到目錄 /dist 下`
+- npm install --save-dev html-webpack-plugin
 
-### (7.2) cross-env (可選)
+### (7.3) cross-env (可選)
 `用途： 導入 package.json 進入 webpack/config.js 環境變數`
 - npm install --save-dev cross-env
 
-### (7.3) css-loader and style-loader （可選）
+### (7.4) css-loader and style-loader （可選）
 `用途： 處理專案 css`
 - npm install --save-dev css-loader
+
 `用途： 利用 style-loader 將 css file plugin html by <style> tag` 
 - npm install --save-dev style-loader
 
-### (7.4) mini-css-extract-plugin （目前用法）
+### (7.5) mini-css-extract-plugin （目前用法）
 `用途： 將 css 與 js 獨立引用 by <link> 標籤`
 - npm install --save-dev mini-css-extract-plugin
 
@@ -94,7 +98,7 @@ devServer: {
   上述 b 和 c 二選一
 ``` 
 
-### (7.5) sass-loader and node-sass
+### (7.6) sass-loader and node-sass
 `用途： 處理專案 scss`
 - npm install --save-dev sass-loader node-sass
 

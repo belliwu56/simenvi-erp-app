@@ -2,12 +2,12 @@
   "name": "simenvi-erp-app",
   "version": "1.0.0",
   "description": "The project develops and build ERP for SimEnvi Comapany.",
-  "main": "index.html",
+  "main": "./src/main.js",
   "author": "jcchen, belliwu",
   "license": "ISC",
   "scripts": {
     "build-watch": "webpack --watch --mode development",
-    "start": "webpack  --mode development",
+    "start": "webpack serve --mode development",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -18,6 +18,11 @@
     "Webpack"
   ],
   "devDependencies": {
+    "css-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
     "webpack": "^5.48.0",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"

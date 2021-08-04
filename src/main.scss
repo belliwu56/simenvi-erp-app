@@ -1,0 +1,11 @@
+$bg_primary: #000;
+$text_color: #fff;
+
+body {
+    background-color: $bg_primary;
+    color: white;
+}
+
+p {
+    color: $text_color;
+}
