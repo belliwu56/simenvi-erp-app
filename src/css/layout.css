@@ -1,0 +1,61 @@
+/* container */
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 920px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1100px;
+    }
+}
+
+/* sidebar and content */
+.content, .sidebar {
+    height: 500px;
+}
+
+@media (min-width: 768px) {
+    .content {
+        width: 68%;
+        float: left;
+    }
+
+    .sidebar {
+        width: 68%;
+        float: left;
+    }
+
+    .sidebar ~ .sidebar {
+        float: right;
+    }
+
+    .sidebar + .content {
+        width: 36%;
+    }
+
+    .content:last-child {
+        width: 68%;
+    }
+
+    .content:only-child {
+        width: 100%;
+    }
+
+}
+
+
+
